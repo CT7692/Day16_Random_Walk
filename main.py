@@ -1,6 +1,15 @@
 from turtle import Turtle, Screen, colormode
 from random import randint
 
+colormode(255)
+
+
+def random_color(tim_turtle):
+    r = randint(0, 255)
+    g = randint(0, 255)
+    b = randint(0, 255)
+    return tim_turtle.color(r, g, b)
+
 
 def turn_direction(tim_turtle):
     set_direction = randint(0, 1)
@@ -18,14 +27,11 @@ def move_direction(tim_turtle):
         tim_turtle.backward(randint(25, 60))
 
 
-colormode(255)
 tim = Turtle()
 tim.width(10)
 my_screen = Screen()
-for i in range(randint(20, 60)):
-    tim.color(randint(0, 255),
-              randint(0, 255),
-              randint(0, 255))
+for i in range(randint(80, 200)):
+    random_color(tim)
     turn_direction(tim)
     move_direction(tim)
 my_screen.exitonclick()
