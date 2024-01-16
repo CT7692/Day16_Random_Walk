@@ -12,16 +12,14 @@ def random_color(tim_turtle):
 
 
 def turn_direction(tim_turtle):
-    set_direction = randint(0, 1)
-    if set_direction == 0:
+    if (set_direction := randint(0, 1)) == 0:
         tim_turtle.right(randint(0, 90))
     elif set_direction == 1:
         tim_turtle.left(randint(0, 90))
 
 
 def move_direction(tim_turtle):
-    set_movement = randint(0, 1)
-    if set_movement == 0:
+    if (set_movement := randint(0, 1)) == 0:
         tim_turtle.forward(randint(25, 60))
     elif set_movement == 1:
         tim_turtle.backward(randint(25, 60))
